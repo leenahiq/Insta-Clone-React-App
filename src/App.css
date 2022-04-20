@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.App {
+  text-align: center;
+  background-color: whitesmoke;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.344);
+}
+.nav input {
+  padding: 10px;
+  width: 30vh;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.nav a {
+  margin-left: 20px;
+  font-weight: 300;
+}
+.pic {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.stories img {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 5px;
+}
+.stories {
+  margin: auto;
+  width: 80vh;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  border: 1px solid rgba(128, 128, 128, 0.219);
+  padding: 0px;
+  background-color: white;
+}
+.img img {
+  width: 80vh;
+  height: 90vh;
+}
+.dp img {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-starts;
+  padding: 10px;
+}
+.dp {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  flex-wrap: wrap;
+}
+.dp p {
+  margin-top: 25px;
+  font-size: 20px;
+}
+h3 {
+  margin-left: 4px;
+}
+p {
+  margin-left: 4px;
+}
+
+.stories p {
+  font-size: 10px;
+  margin-top: 0px;
+  padding: 0;
+  text-align: center;
+}
+
+.tile {
+  border: 1px solid rgba(128, 128, 128, 0.235);
+  width: 80vh;
+  background-color: white;
+
+  margin: auto;
+  margin-top: 15px;
+}
+.like {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.comment {
+  text-align: start;
+}
+.like a {
+  margin: 10px;
+}
