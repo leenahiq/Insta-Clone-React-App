@@ -54,9 +54,13 @@ body {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+
   border: 1px solid rgba(128, 128, 128, 0.219);
-  padding: 0px;
+  padding-top: 5px;
   background-color: white;
+}
+.stories::-webkit-scrollbar {
+  display: none;
 }
 .img img {
   width: 80vh;
