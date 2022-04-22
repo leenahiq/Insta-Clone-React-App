@@ -6,7 +6,7 @@ import { CgAddR } from "react-icons/cg";
 import { MdExplore } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 
-export const Navbar = () => {
+export const Navbar = ({ user }) => {
   return (
     <div className="nav">
       <div className="insta">
@@ -33,6 +33,7 @@ export const Navbar = () => {
           <FaRegHeart style={{ color: "black", fontSize: "25px" }} />
         </a>
         <img className="pic" src={img2} alt="img" />
+        {user}
       </div>
     </div>
   );

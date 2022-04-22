@@ -2,7 +2,11 @@ import "./App.css";
 import Card from "./components/card";
 import Navbar from "./components/navbar";
 import { useState, useEffect } from "react";
-function App() {
+import Login from "./components/login";
+//import Signup from "./components/signup";
+function App({ username }) {
+  const [user, setUser] = useState([]);
+
   const [image, setImage] = useState([""]);
 
   const fetchImage = async () => {
@@ -14,10 +18,23 @@ function App() {
   useEffect(() => {
     fetchImage();
   }, []);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="App">
-      <Navbar />
-      <Card image={image} />
+      <div className="container">
+        <Login handler={submitHandler} />
+        {/* <Signup /> */}
+      </div>
+
+      <div>
+        {username && <Navbar user={user} setUser={setUser} /> && (
+          <Card image={image} />
+        )}
+      </div>
     </div>
   );
 }
