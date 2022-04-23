@@ -3,8 +3,10 @@ import Card from "./components/card";
 import Navbar from "./components/navbar";
 import { useState, useEffect } from "react";
 import Login from "./components/login";
-
+import Signup from "./components/signup";
 function App({ username }) {
+  const [isclicked, setIsclicked] = useState(false);
+
   const [user, setUser] = useState([]);
   const [image, setImage] = useState([""]);
 
@@ -25,7 +27,11 @@ function App({ username }) {
   return (
     <div className="App">
       <div className="container">
-        <Login handler={submitHandler} />
+        {isclicked ? (
+          <Login setIsclicked={setIsclicked} handler={submitHandler} />
+        ) : (
+          <Signup setIsclicked={setIsclicked} />
+        )}
       </div>
 
       <div>
