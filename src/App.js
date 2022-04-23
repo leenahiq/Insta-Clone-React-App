@@ -3,10 +3,9 @@ import Card from "./components/card";
 import Navbar from "./components/navbar";
 import { useState, useEffect } from "react";
 import Login from "./components/login";
-//import Signup from "./components/signup";
+
 function App({ username }) {
   const [user, setUser] = useState([]);
-
   const [image, setImage] = useState([""]);
 
   const fetchImage = async () => {
@@ -27,7 +26,6 @@ function App({ username }) {
     <div className="App">
       <div className="container">
         <Login handler={submitHandler} />
-        {/* <Signup /> */}
       </div>
 
       <div>

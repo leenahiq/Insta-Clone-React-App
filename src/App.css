@@ -6,13 +6,20 @@ body {
 }
 
 .container {
-  height: 100vh;
-
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
 }
+.containerf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 0px 110px 0px;
+}
+
 form {
   width: 50vh;
   height: 60vh;
@@ -20,6 +27,7 @@ form {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  margin: 20px;
 
   border: 1px solid rgba(128, 128, 128, 0.286);
 }
