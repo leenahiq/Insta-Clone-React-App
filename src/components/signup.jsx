@@ -1,8 +1,8 @@
 import img3 from "../img/insta2.png";
-const Signup = () => {
+const Signup = ({ setIsclicked, handler }) => {
   return (
     <div className="signup">
-      <form>
+      <form onSubmit={handler}>
         <div className="insta">
           <img src={img3} alt="instaicon" />
         </div>
@@ -11,7 +11,10 @@ const Signup = () => {
         <input placeholder="password" /> <br />
         <button type="submit">signUp</button>
         <p>
-          Already have account<a href="/">Log In</a>
+          Already have account
+          <a onClick={() => setIsclicked(true)} href="/">
+            Log In
+          </a>
         </p>
       </form>
     </div>
