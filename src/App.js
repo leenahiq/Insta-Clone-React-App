@@ -4,13 +4,14 @@ import Navbar from "./components/navbar";
 import { useState, useEffect } from "react";
 import Login from "./components/login";
 import Signup from "./components/signup";
-function App({ username }) {
+function App() {
   const [isclicked, setIsclicked] = useState(false);
 
   const [user, setUser] = useState([]);
   const [image, setImage] = useState([""]);
 
   const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const fetchImage = async () => {
@@ -67,6 +68,8 @@ function App({ username }) {
             setPassword={setPassword}
             setIsclicked={setIsclicked}
             handler={submitHandler}
+            email={email}
+            setEmail={setEmail}
           />
         )}
       </div>

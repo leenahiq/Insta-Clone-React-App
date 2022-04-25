@@ -1,12 +1,11 @@
-import { useState } from "react";
 import img3 from "../img/insta2.png";
 
 const Login = ({
   handler,
   setIsclicked,
-  username,
+
   setUsername,
-  password,
+
   setPassword,
 }) => {
   return (
