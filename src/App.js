@@ -7,7 +7,7 @@ import Signup from "./components/signup";
 function App() {
   const [isclicked, setIsclicked] = useState(false);
 
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState();
   const [image, setImage] = useState([""]);
 
   const [username, setUsername] = useState();
@@ -27,8 +27,8 @@ function App() {
   const addUser = async (username, email, password) => {
     try {
       const res = await fetch(`${process.env.REACT_APP_REST_API}user`, {
-        mathod: "POST",
-        headers: { "content-Type": "application/json" },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: username,
           email: email,
@@ -50,34 +50,34 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        {isclicked ? (
-          <Login
-            username={username}
-            setUsername={setUsername}
-            passsword={password}
-            setPassword={setPassword}
-            setIsclicked={setIsclicked}
-            handler={submitHandler}
-          />
-        ) : (
-          <Signup
-            username={username}
-            setUsername={setUsername}
-            passsword={password}
-            setPassword={setPassword}
-            setIsclicked={setIsclicked}
-            handler={submitHandler}
-            email={email}
-            setEmail={setEmail}
-          />
-        )}
-      </div>
-
+      {!user && (
+        <div className="container">
+          {isclicked ? (
+            <Login
+              username={username}
+              setUsername={setUsername}
+              passsword={password}
+              setPassword={setPassword}
+              setIsclicked={setIsclicked}
+              handler={submitHandler}
+            />
+          ) : (
+            <Signup
+              username={username}
+              setUsername={setUsername}
+              passsword={password}
+              setPassword={setPassword}
+              setIsclicked={setIsclicked}
+              handler={submitHandler}
+              email={email}
+              setEmail={setEmail}
+            />
+          )}
+        </div>
+      )}
       <div>
-        {user && <Navbar user={user} setUser={setUser} /> && (
-          <Card image={image} />
-        )}
+        {user && <Navbar user={user} setUser={setUser} />}
+        {user && <Card image={image} />}
       </div>
     </div>
   );

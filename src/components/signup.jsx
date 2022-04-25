@@ -20,23 +20,22 @@ const Signup = ({
         />{" "}
         <br />
         <input
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="email"
         />{" "}
         <br />
         <input
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="password"
         />{" "}
         <br />
         <button type="submit">signUp</button>
         <p>
-          Already have account
-          <a onClick={(e) => setIsclicked(true)} href="/">
+          Already have account?
+          <p className="p" onClick={(e) => setIsclicked(true)}>
             Log In
-          </a>
+          </p>
         </p>
       </form>
     </div>

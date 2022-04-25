@@ -39,12 +39,25 @@ button {
   border: none;
   background-color: rgba(30, 143, 255, 0.859);
   color: azure;
+  font-weight: 400;
+}
+button:hover {
+  background-color: rgba(0, 0, 255, 0.68);
+  font-weight: 600;
 }
 form img {
   margin-bottom: 40px;
 }
 form p {
-  margin-top: 60px;
+  margin-top: 40px;
+}
+.p {
+  text-decoration: underline;
+  color: blue;
+}
+.p:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 255, 0.666);
 }
 
 .App {

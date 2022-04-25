@@ -30,9 +30,9 @@ const Login = ({
 
         <p>
           Dont have account?
-          <a onClick={() => setIsclicked(true)} href="/">
+          <p className="p" onClick={() => setIsclicked(false)}>
             Sign Up
-          </a>
+          </p>
         </p>
       </form>
     </div>
