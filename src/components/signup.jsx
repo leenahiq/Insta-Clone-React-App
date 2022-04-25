@@ -1,18 +1,42 @@
+import { useState } from "react";
 import img3 from "../img/insta2.png";
-const Signup = ({ setIsclicked, handler }) => {
+const Signup = ({
+  setIsclicked,
+  handler,
+  username,
+  setUsername,
+  password,
+  setPassword,
+}) => {
+  const [email, setEmail] = useState();
   return (
     <div className="signup">
       <form onSubmit={handler}>
         <div className="insta">
           <img src={img3} alt="instaicon" />
         </div>
-        <input placeholder="username" /> <br />
-        <input placeholder="email" /> <br />
-        <input placeholder="password" /> <br />
+        <input
+          type="text"
+          placeholder="username"
+          onChange={(e) => setUsername(e.target.value)}
+        />{" "}
+        <br />
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          placeholder="email"
+        />{" "}
+        <br />
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          type="password"
+          placeholder="password"
+        />{" "}
+        <br />
         <button type="submit">signUp</button>
         <p>
           Already have account
-          <a onClick={() => setIsclicked(true)} href="/">
+          <a onClick={(e) => setIsclicked(true)} href="/">
             Log In
           </a>
         </p>

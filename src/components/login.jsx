@@ -1,10 +1,14 @@
 import { useState } from "react";
 import img3 from "../img/insta2.png";
 
-const Login = ({ handler, setIsclicked }) => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
-
+const Login = ({
+  handler,
+  setIsclicked,
+  username,
+  setUsername,
+  password,
+  setPassword,
+}) => {
   return (
     <div className="containerf">
       <form onSubmit={handler}>
