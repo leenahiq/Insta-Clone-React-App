@@ -54,12 +54,11 @@ function App() {
   //fetch request for login form
   const addLogIn = async (username, password) => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+      const res = await fetch(`${process.env.REACT_APP_REST_API}login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: username,
-
           password: password,
         }),
       });
@@ -88,7 +87,7 @@ function App() {
               passsword={password}
               setPassword={setPassword}
               setIsclicked={setIsclicked}
-              handler={submitHandler}
+              handler={submitHandlerLogIn}
             />
           ) : (
             <Signup
@@ -97,7 +96,7 @@ function App() {
               passsword={password}
               setPassword={setPassword}
               setIsclicked={setIsclicked}
-              handler={submitHandlerLogIn}
+              handler={submitHandler}
               email={email}
               setEmail={setEmail}
             />
