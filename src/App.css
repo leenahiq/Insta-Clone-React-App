@@ -4,7 +4,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
 }
-
+/* log in /sign up page styling */
 .container {
   display: flex;
   flex-direction: row;
@@ -59,11 +59,13 @@ form p {
   cursor: pointer;
   color: rgba(0, 0, 255, 0.666);
 }
-
+/* main page */
 .App {
   text-align: center;
   background-color: whitesmoke;
 }
+
+/* navbar styling */
 .nav {
   display: flex;
   justify-content: space-around;
@@ -71,7 +73,7 @@ form p {
   flex-wrap: wrap;
   margin: 0;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 10px;
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.344);
 }
@@ -82,9 +84,15 @@ form p {
   background-color: whitesmoke;
   border-radius: 10px;
 }
-.nav a {
+.icon div {
   margin-left: 20px;
   font-weight: 300;
+}
+.icon {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .pic {
   width: 5vh;
@@ -92,7 +100,18 @@ form p {
   border-radius: 50%;
   margin-left: 20px;
 }
-
+.picbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.picbox p {
+  font-size: 10px;
+  text-align: center;
+}
+/* card styling */
 .stories img {
   width: 8vh;
   height: 8vh;
@@ -172,4 +191,15 @@ p {
 }
 .like a {
   margin: 10px;
+}
+
+/* mobile version */
+@media (max-width: 1240px) {
+  .nav .search,
+  .picbox {
+    display: none !important;
+  }
+  .insta {
+    justify-content: flex-start;
+  }
 }

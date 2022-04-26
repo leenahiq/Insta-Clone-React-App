@@ -13,28 +13,29 @@ const Navbar = ({ user }) => {
         <img src={img1} alt="instaicon" />
       </div>
       <div className="search">
-        <input placeholder="Search" />
+        <input placeholder="search" />
       </div>
 
       <div className="icon">
-        <a href="/">
+        <div>
           <AiFillHome style={{ color: "black", fontSize: "25px" }} />
-        </a>
-        <a href="/">
+        </div>
+        <div>
           <FiSend style={{ color: "black", fontSize: "25px" }} />
-        </a>
-        <a href="/">
+        </div>
+        <div>
           <CgAddR style={{ color: "black", fontSize: "25px" }} />
-        </a>
-        <a href="/">
+        </div>
+        <div>
           <MdExplore style={{ color: "black", fontSize: "25px" }} />
-        </a>
-        <a href="/">
+        </div>
+        <div>
           <FaRegHeart style={{ color: "black", fontSize: "25px" }} />
-        </a>
-
-        <img className="pic" src={img2} alt="img" />
-        <a href="/">{user}</a>
+        </div>
+        <div className="picbox">
+          <img className="pic" src={img2} alt="img" />
+          <p>{user}</p>
+        </div>
       </div>
     </div>
   );

@@ -31,12 +31,12 @@ const Signup = ({
         />{" "}
         <br />
         <button type="submit">signUp</button>
-        <p>
+        <div>
           Already have account?
           <p className="p" onClick={(e) => setIsclicked(true)}>
             Log In
           </p>
-        </p>
+        </div>
       </form>
     </div>
   );

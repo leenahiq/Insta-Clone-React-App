@@ -28,12 +28,12 @@ const Login = ({
         <br />
         <button type="submit">log In</button>
 
-        <p>
+        <div>
           Dont have account?
           <p className="p" onClick={() => setIsclicked(false)}>
             Sign Up
           </p>
-        </p>
+        </div>
       </form>
     </div>
   );
